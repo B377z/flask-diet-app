@@ -1,9 +1,15 @@
 {% extends "base.html" %} {% block title %}Meals - Diet App{% endblock %} {%
 block content %}
-<h1 class="my-4">Available Meals</h1>
-<ul class="list-group">
+<h1 class="my-4">Meals</h1>
+<a href="{{ url_for('add_meal') }}" class="btn btn-success">Add a New Meal</a>
+{% if meals %}
+<ul>
   {% for meal in meals %}
-  <li class="list-group-item">{{ meal }}</li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    {{ meal.meal_name }} - <strong>{{ meal.calories }}</strong>
+  </li>
   {% endfor %}
 </ul>
-{% endblock %}
+{% else %}
+<p>No meals available</p>
+{% endif %} {% endblock %}

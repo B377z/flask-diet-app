@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Add Meal - Diet App{% endblock %}
+
+{% block content %}
+    <h1 class="my-4">Add a New Meal</h1>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        <div class="mb-3">
+            {{ form.date.label(class="form-label") }}
+            {{ form.date(class="form-control") }}
+
+        <div class="mb-3">
+            {{ form.meal_name.label(class="form-label") }}
+            {{ form.meal_name(class="form-control") }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.calories.label(class="form-label") }}
+            {{ form.calories(class="form-control") }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">{{ form.submit.label.text }}</button>
+    </form>
+{% endblock %}
+
