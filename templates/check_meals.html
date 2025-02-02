@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %}Home - Diet App{% endblock %} {%
+block content %}
+<h1>Checking Meal Availability</h1>
+
+{% if meals %}
+<ul>
+  {% for meal in meals %}
+  <li>{{ meal }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No meals available</p>
+{% endif %} {% endblock %}

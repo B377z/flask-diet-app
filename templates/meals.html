@@ -1,8 +1,9 @@
 {% extends "base.html" %} {% block title %}Home - Diet App{% endblock %} {%
 block content %}
-<body>
-  <h1>Contact Us</h1>
-  <p>Email: support@dietapp.com</p>
-  <p>Phone: +1234567890</p>
-</body>
+<h1>Avaialable Meals</h1>
+<ul>
+  {% for meal in meals %}
+  <li>{{ meal }}</li>
+  {% endfor %}
+</ul>
 {% endblock %}
