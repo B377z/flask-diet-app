@@ -1,9 +1,9 @@
-{% extends "base.html" %} {% block title %}Home - Diet App{% endblock %} {%
+{% extends "base.html" %} {% block title %}Meals - Diet App{% endblock %} {%
 block content %}
-<h1>Avaialable Meals</h1>
-<ul>
+<h1 class="my-4">Available Meals</h1>
+<ul class="list-group">
   {% for meal in meals %}
-  <li>{{ meal }}</li>
+  <li class="list-group-item">{{ meal }}</li>
   {% endfor %}
 </ul>
 {% endblock %}
